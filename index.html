@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="javascript/js.js" type="text/javascript"></script>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+    /* social media */
+    .fa {
+        padding: 15px;
+        font-size: 25px;
+        width: 5px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    .fa-facebook {
+        background: #008000;
+        color: white;
+        position: relative;
+
+    }
+
+    .fa-twitter {
+        background: #008000;
+        color: white;
+        position: relative;
+
+    }
+
+    .fa-instagram {
+        background: #008000;
+        color: white;
+    }
+
+    input[type=text] {
+        margin-top: 3px;
+        margin-bottom: 3px;
+        float: right;
+        width: 130px;
+        box-sizing: border-box;
+        border: 2px solid #FFFFFF;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('img/search.png');
+        background-position: 10px 6px;
+        background-repeat: no-repeat;
+        padding: 9px 20px 9px 40px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    }
+
+    input[type=text]:focus {
+
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            <div class="column1">
+                <img class="logo" src="img/logo.png" alt="Snow" style="width:100%">
+            </div>
+            <div class="column2">
+                <div class="name1">Sacred Heart School</div>
+                <div class="name2">Hijas de Jesus</div>
+                <div class="name3">聖 心 學 校 - 耶 稣 孝 女 會</div>
+            </div>
+            <div class="column3">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+        </div>
+    </header>
+    <div class="topnav" id="topnav1">
+        <form>
+            <input type="text" name="search" placeholder="Search..">
+        </form>
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var navbar = document.getElementById("topnav1");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+          } else {
+            navbar.classList.remove("sticky");
+          }
+}
+</script>
+    <br>
+    <br>
+    <div class="body">
+        <center>
+            <style type="text/css">
+            .slideshow-container {
+                max-width: 1000px;
+                position: relative;
+                margin: auto;
+            }
+
+            img {
+                vertical-align: middle;
+            }
+
+            .dot {
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+                margin: 0 2px;
+                background-color: #bbb;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+
+            .fade {}
+
+            .active {
+                background-color: #717171;
+            }
+
+            @-webkit-keyframes fade {
+                from {
+                    opacity: .4
+                }
+
+                to {
+                    opacity: 1
+                }
+            }
+
+            @keyframes fade {
+                from {
+                    opacity: .4
+                }
+
+                to {
+                    opacity: 1
+                }
+            }
+
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+                .text {
+                    font-size: 11px
+                }
+            }
+            </style>
+            <div>
+                <img class="sliding mySlides fade" src="pics/IMG_7782.jpg" alt="Paris" width="800" height="300">
+                <img class="sliding mySlides fade" src="pics/IMG_7783.jpg" alt="Paris" width="800" height="300">
+                <img class="sliding mySlides fade" src="pics/IMG_7784.jpg" alt="Paris" width="800" height="300">
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <script type="text/javascript">
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+
+                for (var i = 0; i < slides.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "")
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 2000);
+            }
+            </script>
+        </center>
+    </div>
+    <style type="text/css">
+    /* The grid: Three equal columns that floats next to each other */
+    .column5 {
+        float: left;
+        width: 14.28%;
+        padding: 9px;
+        text-align: center;
+        font-size: 25px;
+        cursor: pointer;
+        color: white;
+        box-sizing: border-box;
+        border-radius: 50px;
+    }
+
+    .containerTab {
+        padding: 20px;
+        color: black;
+        border-radius: 50px;
+        box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 2);
+    }
+
+    /* Clear floats after the columns */
+    .row1:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .change {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    /* Closable button inside the container tab */
+    .closebtn {
+        float: right;
+        color: black;
+        font-size: 35px;
+        cursor: pointer;
+    }
+
+    .this {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2);
+        border-radius: 50px;
+    }
+    </style>
+    <h1>Academics</h1>
+    <div class="change">
+        <div class="row1" id="row2">
+            <div>
+                <img src="school_img/book.png" id="th1" class="column5" onmouseover="openTab('b1', 'th1');" onmouseout="cloceTab('b1', 'th1');">
+            </div>
+            <div>
+                <img src="school_img/lab.png" id="th2" class="column5" onmouseover="openTab('b2', 'th2');" onmouseout="cloceTab('b2', 'th2');">
+            </div>
+            <div>
+                <img src="school_img/math.png" id="th3" class="column5" onmouseover="openTab('b3', 'th3');" onmouseout="cloceTab('b3', 'th3');">
+            </div>
+            <div>
+                <img src="school_img/globe.png" id="th4" class="column5" onmouseover="openTab('b4', 'th4');" onmouseout="cloceTab('b4', 'th4');">
+            </div>
+            <div>
+                <img src="school_img/student.png" id="th5" class="column5" onmouseover="openTab('b5', 'th5');" onmouseout="cloceTab('b5', 'th5');">
+            </div>
+            <div>
+                <img src="school_img/pencil.png" id="th6" class="column5" onmouseover="openTab('b6', 'th6');" onmouseout="cloceTab('b6', 'th6');">
+            </div>
+            <div>
+                <img src="school_img/honor.png" id="th7" class="column5" onmouseover="openTab('b7', 'th7');" onmouseout="cloceTab('b7', 'th7');">
+            </div>
+        </div>
+        <!-- Full-width columns: (hidden by default) -->
+        <div class="row3">
+            <div id="b1" class="containerTab" style="display:none;background:green">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <h2>Box 1</h2>
+                <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+            </div>
+            <div id="b2" class="containerTab" style="display:none;background:blue">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <h2>Box 2</h2>
+                <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+            </div>
+            <div id="b3" class="containerTab" style="display:none;background:red">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <h2>Box 3</h2>
+                <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+            </div>
+            <div id="b4" class="containerTab" style="display:none;background:red">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <h2>Box 4</h2>
+                <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+            </div>
+            <div id="b5" class="containerTab" style="display:none;background:red">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <h2>Box 5</h2>
+                <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+            </div>
+            <div id="b6" class="containerTab" style="display:none;background:red">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <h2>Box 6</h2>
+                <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+            </div>
+            <div id="b7" class="containerTab" style="display:none;background:red">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <h2>Box 7</h2>
+                <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openTab(tabName, thname) {
+            var i, x;
+            x = document.getElementsByClassName("containerTab");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).style.background = "white";
+            if (thname == "th1") {
+                document.getElementById(tabName).style.borderTopLeftRadius = "0";
+            }
+            if (thname == "th7") {
+                document.getElementById(tabName).style.borderTopRightRadius = "0";
+            }
+            document.getElementById(thname).style.borderBottomRightRadius = "0";
+            document.getElementById(thname).style.borderBottomLeftRadius = "0";
+            document.getElementById(tabName).style.boxShadow = "-3px 4px 8px 0 rgba(0, 0, 0, 2)";
+            document.getElementById(thname).style.boxShadow = "-3px -3px 5px 0px rgba(0, 0, 0, 2)";
+        }
+
+        function cloceTab(tabName, thname) {
+            document.getElementById(tabName).style.display = "none";
+            document.getElementById(thname).style.borderRadius = "50px";
+
+            document.getElementById(tabName).style.boxShadow = "0px 0px 0px 0px rgba(0, 0, 0, 0)";
+            document.getElementById(thname).style.boxShadow = "0px 0px 0px 0px rgba(0, 0, 0, 0)";
+        }
+        </script>
+    <style type="text/css">
+    h1 {
+        font-family: arial, sans-serif;
+        margin: 50px 50px 20px 100px;
+        font-size: 60px;
+        text-align: justify;
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        border: 3px solid #2AE621;
+        margin: 20px 50px 20px 100px;
+        text-align: center;
+        border-radius: 1em;
+        overflow: hidden;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2);
+        float: left;
+    }
+
+    td,
+    th,
+    .top {
+        border: 1px solid #2AE621;
+        padding: 8px;
+        width: 30px;
+    }
+
+    #para {
+        margin: 20px 80px 20px 100px;
+        font-size: 25px;
+        text-align: justify;
+    }
+
+    #youtube {
+        margin: 20px 100px 20px 50px;
+        font-size: 25px;
+        float: right;
+        width: 560px;
+        height: 315px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2);
+        border-radius: 20px;
+
+    }
+
+    .top {
+        border: 1px solid #2AE621;
+        padding: 8px;
+        width: 30px;
+    }
+
+    .day:hover {
+        background-color: #0FBB8C;
+        cursor: pointer;
+    }
+
+    .day:focus {
+        background-color: #0FBB8C;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #78F572;
+    }
+
+    <style>.close:before {
+        left: 9px;
+        top: 100px;
+        color: green;
+    }
+    </style>
+    </style>
+    <h1>Events</h1>
+    <table class="calendar">
+        <tr id="thead">
+            <td COLSPAN=7> Janaury 2019</td>
+        </tr>
+        <tr align="center">
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thr</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+        <tr class="tbody">
+            <td class="day" id="1" onclick="day('d1')">1<span class="close">&bull;</span></td>
+            <td class="day" id="2" onclick="day('d2')">2</td>
+            <td class="day" id="3" onclick="day('d3')">3</td>
+            <td class="day" id="4" onclick="day('d4')">4</td>
+            <td class="day" id="5" onclick="day('d5')">5</td>
+            <td class="day" id="6" onclick="day('d6')">6</td>
+            <td class="day" id="7" onclick="day('d7')">7</td>
+        </tr>
+        <tr class="tbody">
+            <td class="day" id="8" onclick="day('d8')">8</td>
+            <td class="day" id="9" onclick="day('d9')">9</td>
+            <td class="day" id="10" onclick="day('d10')">10<span class="close">&bull;</span></td>
+            <td class="day" id="11" onclick="day('d11')">11</td>
+            <td class="day" id="12" onclick="day('d12')">12</td>
+            <td class="day" id="13" onclick="day('d13')">13</td>
+            <td class="day" id="14" onclick="day('d14')">14</td>
+        </tr>
+        <tr class="tbody">
+            <td class="day" id="15" onclick="day('d15')">15</td>
+            <td class="day" id="16" onclick="day('d16')">16</td>
+            <td class="day" id="17" onclick="day('d17')">17</td>
+            <td class="day" id="18" onclick="day('d18')">18</td>
+            <td class="day" id="19" onclick="day('d19')">19</td>
+            <td class="day" id="20" onclick="day('d20')">20</td>
+            <td class="day" id="21" onclick="day('d21')">21</td>
+        </tr>
+        <tr class="tbody">
+            <td class="day" id="22" onclick="day('d22')">22</td>
+            <td class="day" id="23" onclick="day('d23')">23</td>
+            <td class="day" id="24" onclick="day('d24')">24</td>
+            <td class="day" id="25" onclick="day('d25')">25</td>
+            <td class="day" id="26" onclick="day('d26')">26</td>
+            <td class="day" id="27" onclick="day('d27')">27<span class="close">&bull;</span></td>
+            <td class="day" id="28" onclick="day('d28')">28</td>
+        </tr>
+        <tr class="tbody">
+            <td class="day" id="29" onclick="day('d29')">29</td>
+            <td class="day" id="30" onclick="day('d30')">30</td>
+            <td class="day" id="31" onclick="day('d31')">31</td>
+            <td class="day" id="" onclick="day('')"></td>
+            <td class="day" id="" onclick="day('')"></td>
+            <td class="day" id="" onclick="day('')"></td>
+            <td class="day" id="" onclick="day('')"></td>
+        </tr>
+    </table>
+    <div class="par1" id="d1">
+        <p id="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. f you're visiting this page, you're likely here because you're searching for a random sentence. Sometimes a random word just isn't enough, and that is where the random sentence generator comes into play. By inputting the desired number, you can make a list of as many random sentences as you want or need. Producing random sentences can be helpful in a number of different ways.</p>
+        <p id="para">
+            For writers, a random sentence can help them get their creative juices flowing. Since the topic of the sentence is completely unknown, it forces the writer to be creative when the sentence appears. There are a number of different ways a writer can use the random sentence for creativity. The most common way to use the sentence is to begin a story. Another option is to include it somewhere in the story. A much more difficult challenge is to use it to end a story. In any of these cases, it forces the writer to think creatively since they have no idea what sentence will appear from the tool.</p>
+        <p id="para">
+            For those writers who have writers' block, this can be an excellent way to take a step to crumbling those walls. By taking the writer away from the subject matter that is causing the block, a random sentence may allow them to see the project they're working on in a different light and perspective. Sometimes all it takes is to get that first sentence down to help break the block.</p>
+        <p id="para">
+            It can also be successfully used as a daily exercise to get writers to begin writing. Being shown a random sentence and using it to complete a paragraph each day can be an excellent way to begin any writing session.</p>
+        <iframe id="youtube" src="https://www.youtube.com/embed/9YffrCViTVk"></iframe>
+        <p id="para">
+            Random sentences can also spur creativity in other types of projects being done. If you are trying to come up with a new concept, a new idea or a new product, a random sentence may help you find unique qualities you may not have considered. Trying to incorporate the sentence into your project can help you look at it in different and unexpected ways than you would normally on your own.</p>
+        <p id="para">
+            It can also be a fun way to surprise others. You might choose to share a random sentence on social media just to see what type of reaction it garners from others. It's an unexpected move that might create more conversation than a typical post or tweet.</p>
+        <p id="para">
+            These are just a few ways that one might use the random sentence generator for their benefit. If you're not sure if it will help in the way you want, the best course of action is to try it and see. Have several random sentences generated and you'll soon be able to see if they can help with your project.</p>
+        <p id="para">
+            Our goal is to make this tool as useful as possible. For anyone who uses this tool and comes up with a way we can improve it, we'd love to know your thoughts. Please contact us so we can consider adding your ideas to make the random sentence generator the best it can be.</p>
+    </div>
+    <div class="par1" id="d10" style="display:none;">
+        <p id="para">
+            If you're visiting this page, you're likely here because you're searching for a random sentence. Sometimes a random word just isn't enough, and that is where the random sentence generator comes into play. By inputting the desired number, you can make a list of as many random sentences as you want or need. Producing random sentences can be helpful in a number of different ways.</p>
+        <p id="para">
+            For writers, a random sentence can help them get their creative juices flowing. Since the topic of the sentence is completely unknown, it forces the writer to be creative when the sentence appears. There are a number of different ways a writer can use the random sentence for creativity. The most common way to use the sentence is to begin a story. Another option is to include it somewhere in the story. A much more difficult challenge is to use it to end a story. In any of these cases, it forces the writer to think creatively since they have no idea what sentence will appear from the tool.</p>
+        <p id="para">
+            For those writers who have writers' block, this can be an excellent way to take a step to crumbling those walls. By taking the writer away from the subject matter that is causing the block, a random sentence may allow them to see the project they're working on in a different light and perspective. Sometimes all it takes is to get that first sentence down to help break the block.</p>
+        <iframe id="youtube" src="https://www.youtube.com/embed/J9ch9lGTt88" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p id="para">
+            It can also be successfully used as a daily exercise to get writers to begin writing. Being shown a random sentence and using it to complete a paragraph each day can be an excellent way to begin any writing session.</p>
+        <p id="para">
+            Random sentences can also spur creativity in other types of projects being done. If you are trying to come up with a new concept, a new idea or a new product, a random sentence may help you find unique qualities you may not have considered. Trying to incorporate the sentence into your project can help you look at it in different and unexpected ways than you would normally on your own.</p>
+        <p id="para">
+            It can also be a fun way to surprise others. You might choose to share a random sentence on social media just to see what type of reaction it garners from others. It's an unexpected move that might create more conversation than a typical post or tweet.</p>
+        <p id="para">
+            These are just a few ways that one might use the random sentence generator for their benefit. If you're not sure if it will help in the way you want, the best course of action is to try it and see. Have several random sentences generated and you'll soon be able to see if they can help with your project.</p>
+        <p id="para">
+            Our goal is to make this tool as useful as possible. For anyone who uses this tool and comes up with a way we can improve it, we'd love to know your thoughts. Please contact us so we can consider adding your ideas to make the random sentence generator the best it can be.</p>
+    </div>
+    <div class="par1" id="d27" style="display:none;">
+        <p id="para"> 1. Moon
+            The Moon is a barren, rocky world without air and water. It has dark lava plain on its surface. The Moon is filled wit craters. It has no light of its own. It gets its light from the Sun. The Moo keeps changing its shape as it moves round the Earth. It spins on its axis in 27.3 days stars were named after the Edwin Aldrin were the first ones to set their foot on the Moon on 21 July 1969 They reached the Moon in their space craft named Apollo II.</p>
+        <p id="para">
+            2. Sun
+            The sun is a huge ball of gases. It has a diameter of 1,392,000 km. It is so huge that it can hold millions of planets inside it. The Sun is mainly made up of hydrogen and helium gas. The surface of the Sun is known as the photosphere. The photosphere is surrounded by a thin layer of gas known as the chromospheres. Without the Sun, there would be no life on Earth. There would be no plants, no animals and no human beings. As, all the living things on Earth get their energy from the Sun for their survival.</p>
+        <p id="para">
+            3. Solar System
+            ADVERTISEMENTS:
+            The Solar System consists of the Sun Moon and Planets. It also consists of comets, meteoroids and asteroids. The Sun is the largest member of the Solar System. In order of distance from the Sun, the planets are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune and Pluto; the dwarf planet. The Sun is at the centre of the Solar System and the planets, asteroids, comets and meteoroids revolve around it.</p>
+        <p id="para">
+            4. Mahabharata
+            The Mahabharata is a story about a great battle between the Kauravas and the Pandavas. The battle was fought in Kurukshetra near Delhi. Many kings and princes took part in the battle. The Pandavas defeated the Kauravas. The Bhagvad Gita is a holy book of the Hindus. It is a part of the Mahabharata. Then, Lord Rama, with the help of It is a book of collection of teachings of Lord Krishna to Arjuna in the battlefield. It is the longest epic in the world.</p>
+        <iframe id="youtube" src="https://www.youtube.com/embed/jiRlAo-NvYw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p id="para">
+            5. Ramayana
+            The Ramayana is a story of Lord Rama written by the SageValmiki. Lord Rama, the prince of Ayodhya, in order to help his father Dasharatha went to exile for fourteen years. His wife, Sita and his younger brother Lakshmana also went with him. He went through many difficulties in the forest. One day Ravana, the king of Lanka carried away Sita with him. Then, Lord Rama, with the help of Hanumana, defeated and killed Ravana; Sita, Rama and Lakshmana returned to Ayod hya after their exile.</p>
+        <p id="para">
+            6. The Taj Mahal
+            The Taj Mahal is a beautiful monument built in 1631 by an Emperor named Shah Jahan in memory of his wife Mumtaz Mahal. It is situated on the banks of river Yamuna at Agra. It looks beautiful in the moonlight. The Taj Mahal is made up of white marble. In front of the monument, there is a beautiful garden known as the Charbagh. Inside the monument, there are two tombs. These tombs are of Shah Jahan and his wife Mumtaz Mahal. The Taj Mahal is considered as one of the Seven Wonders of the World. Many tourists come to see this beautiful structure from different parts of the world.</p>
+        <p id="para">
+            7. Delhi
+            ADVERTISEMENTS:
+            Delhi is the capital of India. It is situated on the banks of the river Yamuna. It is surrounded by Haryanaand Uttar Pradesh. It has some of the famous buildings and monuments such as the Qutub Minar, Reu Fort, Lotus Temple, Akshardham Temple etc. Some of the monuments are hundreds of years old. Apart from this, there is the Parliament House, the Central Secretariat and the famous Connaught place. Delhi is a beautiful city. But, it is becoming very crowded and polluted. I love Delhi a lot.</p>
+        <p id="para">
+            8. A Snake Charmer
+            A snake charmer is a person who moves the streets with different types of the banks of the river Yamuna. It is snakes in his basket. He goes from one place to another to show various types of snakes and their tricks. He carries a pipe with which he plays music and snakes dance to his tune. He usually wears a colourful dress. The job of a snake charmer is quite dangerous. Some snakes are quite poisonous and can even bite him. It is not an easy task to catch and train them for the shows.</p>
+        <p id="para">
+            9. Street Beggar
+            A street beggar can be seen everywhere; at the bus stop, railway stations, religious places, markets etc. Some beggars are crippled, lame and some are blind. They are unable to earn their livelihood. Whereas some are healthy and they do not deserve our sympathy. We should see that they take up some profession. They should not be allowed to beg. On my way to school I see a beggar daily. He wears old rags. He is partially blind. I feel pity seeing him but I can’t help it I can only pray to God to help him to earn his livelihood.</p>
+        <p id="para">
+            10. Doctor
+            The doctor is a person who looks after the sick people and prescribes medicines so that the patient recovers fast. In order to become a doctor, a person has to study medicine. Doctors lead a hard life. Their life is very busy. They get up early in the morning and go to the hospital. They work without taking a break. They always remain polite so that patients feel comfortable with them. Since doctors work so hard we must realise their value.</p>
+        <p id="para">
+            11. Hawker
+            ADVERTISEMENTS:
+            A hawker is a person who moves from one place to another and sell their goods, by shouting on the streets. They work hard throughout the day. They move on the street on their bicycle and sometimes on foot and sell their products. We can see hawkers everywhere. They move everywhere selling their goods without caring about the weather. There is a hawker who sells vegetables on his bicycle in our locality. His name is Manoj. He brings fresh vegetables at a very reasonable price. He is a nice and an honest hawker.</p>
+        <p id="para">
+            12. Farmer
+            India is an agricultural country. Most of the people live in villages and are farmers. They grow cereals, pulses, vegetables and fruits. The farmers lead a tough life. They get up early in the morning and go to the fields. They stay and work on the farm late till evening. The farmers usually live in kuchcha houses. Though, they work hard they remain poor. Farmers eat simple food; wear simple clothes and rear animals like cows, buffaloes and oxen. Without them there would be no cereals for us to eat. They play an important role in the growth and economy of a country.
+        </p>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+    function day(day, date) {
+        var i, x;
+        var a = document.getElementById(day);
+        if (a) {
+            x = document.getElementsByClassName("par1");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(day).style.display = "block";
+        } else {
+            alert("Event Does Not Exist!");
+        }
+    }
+    </script>
+    <style type="text/css">
+    .about {
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 50px;
+        box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 2);
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .newspaper {
+        width: 100%;
+        -webkit-column-count: 3;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 3;
+        /* Firefox */
+        column-count: 3;
+
+        -webkit-column-gap: 40px;
+        /* Chrome, Safari, Opera */
+        -moz-column-gap: 40px;
+        /* Firefox */
+        column-gap: 40px;
+        /*
+            -webkit-column-rule: 4px double #ff00ff;  Chrome, Safari, Opera 
+            -moz-column-rule: 4px double #ff00ff;  Firefox 
+            column-rule: 4px double #ff00ff;
+            */
+    }
+
+    .news {
+        padding: 10px;
+    }
+    </style>
+    <div class="about">
+        <h1>About</h1>
+        <p>The column-rule property sets the width, style, and color of the rule between the columns of the element:</p>
+        <div class="newspaper">
+            <div class="news">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+            </div>
+        </div>
+        <p><strong>Note:</strong> The column-rule property is not supported in Internet Explorer 9 and earlier versions.</p>
+    </div>
+    <div class="body">
+    </div>
+    <style type="text/css" media="screen">
+        footer {
+          background-color:#008000;
+          padding: 10px;
+          padding-left: 70px;
+          padding-right: 18px;
+          text-align: left;
+          font-size: 20px;
+          color: white;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          /*border-top-right-radius: 20px;
+          border-top-left-radius: 20px;*/
+        }
+
+        .column4 {
+            width: 15%;
+            border-right: 25%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            float: left;
+        }
+        .address{
+            width: 50%;
+            float: left;
+            
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+    </style>
+    <footer>
+        <div class="row">
+            <div class="column4">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+            <div class="address">
+                <div class="">©Sacred Heart School - Hijas de Jesus</div>
+                <div class="">Don Jose Avila St, Cebu City, Cebu</div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
